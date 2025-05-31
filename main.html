@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<title>ГЛАВНАЯ</title>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=811eea2a-c8b6-4920-a44d-53e55e1323d1&lang=ru_RU" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/3860b9b678.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+		function init(){
+		    var myMap = new ymaps.Map("map", {
+		        center: [43.19940092331356,76.87764186382391],
+		        zoom: 18
+		    }, {
+		        searchControlProvider: 'yandex#search'
+		    });
+		    myGeoObject = new ymaps.GeoObject({
+		        geometry: {
+		            type: "Point",
+		            coordinates: [43.19940092331356,76.87764186382391]
+		        },
+		        properties: {
+		            iconContent: 'HumanHelp',
+		            hintContent: 'Interhational Organization'
+		        }
+		    }, {
+		        preset: 'islands#blackStretchyIcon',
+		        draggable: true
+		    }),
+
+		    myMap.geoObjects
+		        .add(myGeoObject);
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="logo.png" alt="logo" id="logo">
+		</div>
+		<div class="website_name">
+			<p>HumanHelp</p>
+		</div>
+		<nav><i class="fa fa-search"></i>
+			<input type="text" placeholder="Искать" id="ser">
+			<a href="main.html" id="current">ГЛАВНАЯ</a>
+			<a href="here.html">ПРЕБЫВАНИЕ В РК</a>
+			<a href="about.html">РАБОТА И ПРОЖИВАНИЕ</a>
+			<a href="info.html">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a><div id="i">
+			<i class="fa-brands fa-instagram"></i>
+			<i class="fa-brands fa-whatsapp"></i>
+			<i class="fa-brands fa-telegram"></i>
+
+		</div>
+		</nav>
+		<div id="account">
+			<a href="registration_page.html"><i class="fa-solid fa-user"></i></a>
+		</div>
+	</header>
+	<section class="warning">
+		<div>
+			    <p id="font">  <b id="zh">HumanHelp</b> приглашает всех неравнодушных поддержать людей, столкнувшихся со сложностями обретения нового дома.<br> Наш Комитет оказывает бесплатную юридическую, медицинскую, психологическую и гуманитарную помощь всем, кто в ней нуждается.<br>	 Мы помогаем снова поверить в себя и мир вокруг!
+			  </p>
+			
+		</div>
+		
+		
+	</section>
+	
+	</section>
+	<img src="back.png" id="back">
+	<section>
+		<br><br><br>
+		<h4 align="center">КАК И ПОЧЕМУ ПОЯВИЛАСЬ НАША ПРОГРАММА?</h4>
+		<br><img src="9.jpeg" id="think">
+		<p id="sklad">Беженцы которые планируют остаться в Казахстане, начинают заниматься документами, а это очень тяжелый процесс. Прибывшие люди могут получить либо статус беженца, либо временное убежище. Без этого они не могут ни устроить детей в школу или детские сады, ни найти работу. Статус беженца в Казахстане получить очень сложно, он предусматривает много льгот, поэтому выдают его неохотно.
+			Это значит, что много людей не могут получить убежище.
+			То есть полноценно трудиться, получать медицинскую и социальную помощь, учиться и вести полноценную жизнь. </p>
+
+	</section>
+	<br><br><br>
+	<section>
+		<h4 align="center">КАК РАБОТАЕТ ПРОГРАММА?</h4>
+		<br><img src="10.jpg" id="think">
+		<p id="sklad">После обращения беженцев и лиц без гражданства в нашу приемную им бесплатно оказывается следующая помощь:
+<br><br>
+— консультации по миграционным вопросам, помощь в подаче заявления на убежище или гражданство — часто люди просто не знают, куда идти и что делать;
+<br>
+— юридическая помощь — обращения и сопровождения в миграционную службу, суды, обжалование отказов в предоставлении убежища, защита от высылки в страну, где жизни человека грозить опасность, защита жертв расистских нападений;
+<br>
+— защита права детей на образование — помощь детям в устройстве в школы и детские сады;	
+<br>
+— медицинская и психологическая помощь — в том числе сопровождения в медицинские учреждения;
+<br>
+— помощь в изучении казахского языка — для лучшей интеграции, расширения возможностей и повышения качества жизни;
+<br>
+— помощь вещами и продуктами — их приносят в наш Комитет те, кому небезразлична судьба беженцев;
+<br>
+— в особых случаях единоразовая материальная помощь;</p>
+
+	</section><br><br><br>
+<fieldset id="set">
+	<br>
+	<section>
+		
+		<h4 align="center">КАК МОЖЕТЕ ПОМОЧЬ ВЫ?</h4>
+		<br>
+		<h5 align="center">ДЕНЬГАМИ</h5>
+		<br><br>
+		<p id="sklad1">1)На проезд, продукты, анализы и медикаменты, единоразовую материальную помощь мигрантам.
+		<br><br>
+						2)Если вы чувствуете в себе силы и желание помочь, то это можно сделать прямо сейчас.</p>
+         <button id="but" ><a href="support.html">ПОДДЕРЖИВАТЬ</a></button>
+		<br><br>
+		<p id="item"><h5 align="center">ВЕЩАМИ</h5></p>
+		<p id="sklad1">1)Чистой одеждой, предметами быта, игрушками, крупами, консервами, средствами гигиены.
+
+		<br><br>
+2)Необходимо помнить, что беженцы часто лишены самых простых повседневных вещей, поэтому важна любая, даже кажущаяся незначительной, помощь.</p>
+
+	</section></fieldset>
+	<br><br><br><br>
+	<main>
+	
+		<section id="news_container">
+			<div id="news_header">
+				<h3> НОВОСТИ О МИГРАЦИИ</h3>
+			</div>
+			<div class="news">
+				<img class="news_img" src="6.jpg">
+				<p class="news_date">25 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">Сегодня в мире насчитывается примерно 164 миллиона трудовых мигрантов, а это – 5 процентов всей рабочей силы.</a>
+			</div>
+			<div class="news">
+				<img class="news_img" src="ot.jpg">
+				<p class="news_date">23 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">Из-за пожаров, наводнений, засух и ураганов к 2050 году примерно 216 млн человек будут вынуждены покинуть свои дома.</a>
+			</div>
+
+			<div class="news">
+				<img class="news_img" src="1.jpg">
+				<p class="news_date">26 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">Между Андаманским морем и Бенгальским заливом дрейфует судно, на котором находятся около 190 отчаявшихся мигрантов....</a>
+			</div>
+			<div class="news">
+				<img class="news_img" src="2.jpg">
+				<p class="news_date">22 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">Последствия вторжения России в Украину испытывают на себе не только эти две страны, но и государства Центральной Азии.</a>
+			</div>
+
+			<div class="news">
+				<img class="news_img" src="3.jpg">
+				<p class="news_date">21 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">Под эгидой ООН стартовала Международная неделя миграции. Ее цель – провести обзор выполнения Глобального договора.</a>
+			</div>
+			<div class="news">
+				<img class="news_img" src="4.jpg">
+				<p class="news_date">21 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">На сегодняшний день насчитывается 281 млн международных мигрантов.Речь идет о людях, которые живут и работают за пределами тех стран...</a>
+			</div>
+			<div class="news">
+				<img class="news_img" src="5.jpg">
+				<p class="news_date">3 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">В Международной организация по миграции совместно с партнерами наращивает масштабы помощи мигрантам и беженцам</a>
+			</div>
+			<div class="news">
+				<img class="news_img" src="11.jpg">
+				<p class="news_date">17 ноября 2022.</p>
+				<a class="news_text" href="https://news.un.org/ru/tags/migranty?page=0">В ООН крайне обеспокоены судьбой беженцев,в приграничных районах между Беларусью и странами Евросоюза</a>
+			</div>
+		</section>
+		<section id="tips_container">
+			<div id="tips_header">
+				<h3>СТРАНЫ ООН</h3>
+			</div>
+			<div class="tips">
+				<img class="tips_img" src="fk.png">
+				<p class="tips_text">В Kaзaхстaне дeйствует достаточно эффeктивная cиcтема мигpационного кoнтроля, которая оcуществляется на основании Правил въезда и пребывания мигpaнтов в Pеспублике Kазахстан</p>
+			</div>
+			<div class="tips">
+				<img class="tips_img" src="uf.jpg">
+				<p class="tips_text">Государственная миграционная служба Украины – это единственное государственное учреждение, которое может предоставить Вам статус беженца или лица, которое нуждается в дополнительной защите, а также предоставить Вам законное право пребывать в Украине</p>
+			</div>
+			<div class="tips">
+				<img class="tips_img" src="rf.png">
+				<p class="tips_text">Федеральная миграционная служба  — федеральный орган исполнительной власти, реализовывавший государственную политику в сфере миграции</p>
+			</div>
+		</section>
+
+	</main>
+	<br><br>
+	<footer>
+    <div id="footer_info">
+      <h2>Наши контакты</h2>
+      <div>+7 777 987 65 43</div>
+      <div>human.help@mail.ru<br>help.human@gmail.com</div>
+      <p>Алматы, Мустафина 5Г,HumanHelp</p>
+      <p><br>Рабочее время:</br><br>понедельник (9:00-16:00)<br/><br> среда (9:00-16:00)</br><br>пятница (9:00-16:00)</p>
+    </div>
+ <fieldset id="map1"><div id="map"></div></fieldset>
+    </footer>
+
+   
+
+
+  <div id="copyright">Все права защищены <br>&copy; humanhelp</div>
+</body>
+</html>

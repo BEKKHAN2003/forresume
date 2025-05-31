@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <title>ГЛАВНАЯ</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=811eea2a-c8b6-4920-a44d-53e55e1323d1&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/3860b9b678.js" crossorigin="anonymous"></script>
+  <style type="text/css" >
+    table{
+        background:yellowgreen;
+        font-family: Bradley Hand, cursive;
+        border-radius: 10px;
+      }
+
+  </style>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [43.19940092331356,76.87764186382391],
+            zoom: 18
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        myGeoObject = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [43.19940092331356,76.87764186382391]
+            },
+            properties: {
+                iconContent: 'HumanHelp',
+                hintContent: 'Interhational Organization'
+            }
+        }, {
+            preset: 'islands#blackStretchyIcon',
+            draggable: true
+        }),
+
+        myMap.geoObjects
+            .add(myGeoObject);}
+
+            // for current page
+/*$('#nav').find('a').each(function() {
+    if(($(this).attr('href')==$(location).attr('href');) 
+    || ($(this).attr('href')==$(location).attr('pathname');){
+           $(this).parent.addClass("current");
+    }
+});*/
+
+function ResetForm() {
+    var errorMessages = document.getElementsByClassName('error_message');
+    [...errorMessages].forEach(item => {
+        item.innerHTML = "";
+    });
+    var input = document.querySelectorAll('input');
+    [...input].forEach(item => {
+        if(item.type != "button"){
+            item.value = "";
+        }
+    });
+    var select = document.querySelector('select');
+    select.value = "";
+}
+
+function RegistrationPage() {
+    var email = document.getElementById('email');
+    var re = /^[A-Za-z0-9_.]+[@]+[a-z]+[.]+[a-z]{2,}$/;
+    if(!re.test(email.value)){
+        document.getElementById('email_message').innerHTML = "Адрес электронной почты пустой или неправильный формат";
+        email.style.borderColor = "red";
+    }
+    else{
+        email.value = "";
+        document.getElementById('email_message').innerHTML = "";
+        email.style.borderColor = "lime";
+    }
+
+    var name = document.getElementById('username');
+    var re = /^[А-Я]+[а-я]{1,}$/;
+    if(!re.test(name.value)){
+        document.getElementById('username_message').innerHTML = "Пожалуйста, напишите свое имя без пробелов и начните с заглавной буквы";
+        name.style.borderColor = "red";
+    }
+    else{
+        name.value = "";
+        document.getElementById('username_message').innerHTML = "";
+        name.style.borderColor = "lime";
+    }
+
+    var password = document.getElementById('password');
+    var pass = "";
+    var re = /^[A-Za-z0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]{8,}$/;
+    if(!re.test(password.value)){
+        document.getElementById('password_message').innerHTML = "Пароль пуст или имеет неправильный формат (не менее 8 символов и сочетание букв, цифр и символов)";
+        password.style.borderColor = "red";
+    }
+    else{
+        pass = password.value;
+        password.value = "";
+        document.getElementById('password_message').innerHTML = "";
+        password.style.borderColor = "lime";
+    }
+
+    var repassword = document.getElementById('repassword');
+    var re = /^[A-Za-z0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]{8,}$/;
+    if((!re.test(repassword.value)) || repassword.value != pass){
+        document.getElementById('repassword_message').innerHTML = "Пароль пуст или имеет неправильный формат (не менее 8 символов и сочетание букв, цифр и символов)";
+        repassword.style.borderColor = "red";
+    }
+    else{
+        repassword.value = "";
+        document.getElementById('repassword_message').innerHTML = "";
+        repassword.style.borderColor = "lime";
+    }
+
+    var date = document.getElementById('birthday');
+    var re = /[0-9]+[./-]+[0-9]+[./-]+[0-9]{1,}$/;
+    if(!re.test(date.value)){
+        document.getElementById('birthday_message').innerHTML = "Пожалуйста, выберите дату";
+        date.style.borderColor = "red";
+    }
+    else{
+        date.value = "";
+        document.getElementById('birthday_message').innerHTML = "";
+        date.style.borderColor = "lime";
+    }
+    
+    var address = document.getElementById('address');
+    var re = /[А-Яа-я0-9\s]{1,}$/;
+    if(!re.test(address.value)){
+        document.getElementById('address_message').innerHTML = "Адрес пуст";
+        address.style.borderColor = "red";
+    }
+    else{
+        address.value = "";
+        document.getElementById('address_message').innerHTML = "";
+        address.style.borderColor = "lime";
+    }   
+
+    var phone = document.getElementById('phone');
+    var re = /[7]+[0-9]{10}$/;
+    if(!re.test(phone.value)){
+        document.getElementById('phone_message').innerHTML = "Номер телефона пустой или неправильный формат";
+        phone.style.borderColor = "red";
+    }
+    else{
+        phone.value = "";
+        document.getElementById('phone_message').innerHTML = "";
+        phone.style.borderColor = "lime";
+    }
+
+}
+
+
+
+      
+    
+  </script>
+</head>
+
+  <header>
+    <div>
+      <img src="logo.png" alt="logo" id="logo">
+    </div>
+    <div class="website_name">
+      <p>HumanHelp</p>
+    </div>   
+
+    <nav>
+      <a href="main.html" id="current">ГЛАВНАЯ</a>
+      <a href="here.html">ПРЕБЫВАНИЕ В РК</a>
+      <a href="about.html">РАБОТА И ПРОЖИВАНИЕ</a>
+      <a href="info.html">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a><div id="i">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-telegram"></i>
+    </div>
+    </nav>
+    <div id="account">
+      <a href="registration_page.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+
+  </header>
+<body>
+    
+        <div id="container">
+        <form id="RegistrationPage" method="post">
+            <h2>Регистрация</h2>
+            <table>
+                <tbody>
+                    <tr class="input-group">
+                        <td></td>
+                        <td><label id="email_message" class="error_message"></label></td>
+                    </tr>
+                    <tr class="input-group">
+                        <td>Почта: </td>
+                        <td><input type="text" name="email" id="email" size="10"></td>
+                    </tr>
+
+        <tr class="input-group">
+            <td></td>
+            <td><label id="username_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>Имя:</td>
+            <td><input type="text" name="username" id="username" size="10"></td>
+        </tr>
+        <tr class="input-group">
+            <td></td>
+            <td><label id="password_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>Пароль:</td>
+            <td><input type="password" name="password" id="password" size="10"></td>
+        </tr>
+        <tr class="input-group">
+            <td></td>
+            <td><label id="repassword_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>Повторите пароль:</td>
+            <td><input type="password" name="repassword" id="repassword" size="10"></td>
+        </tr>
+        <tr class="input-group">
+            <td></td>
+            <td><label id="birthday_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>День рождения:</td>
+            <td><input type="date" name="birthday" id="birthday" size="10"></td>
+        </tr>
+        <tr class="input-group">
+            <td></td>
+            <td><label id="address_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>Адрес:</td>
+            <td><input type="text" name="address" id="address" size="10"></td>
+        </tr>
+        <tr class="input-group">
+            <td></td>
+            <td><label id="phone_message" class="error_message"></label></td>
+        </tr>
+        <tr class="input-group">
+            <td>Номер телефона:</td>
+            <td><input type="text" name="phone" id="phone" size="10"></td>
+        </tr>
+    </div>
+    </tbody>
+    </table>
+    <input type="button" value="Отправить" id="submitPage" onclick="RegistrationPage()">
+    <input type="button" value="Очистить" id="clearPage" onclick="ResetForm()">
+    </form>
+    </div>
+</body>
+  <br><br>
+  <footer>
+    <div id="footer_info">
+      <h2>Наши контакты</h2>
+      <div>+7 777 987 65 43</div>
+      <div>human.help@mail.ru<br>help.human@gmail.com</div>
+      <p>Алматы, Мустафина 5Г,HumanHelp</p>
+      <p><br>Рабочее время:</br><br>понедельник (9:00-16:00)<br/><br> среда (9:00-16:00)</br><br>пятница (9:00-16:00)</p>
+    </div>
+ <fieldset id="map1"><div id="map"></div></fieldset>
+    </footer>
+
+   
+
+
+  <div id="copyright">Все права защищены <br>&copy; humanhelp</div>
+</html>

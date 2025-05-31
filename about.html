@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <title>ГЛАВНАЯ</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=811eea2a-c8b6-4920-a44d-53e55e1323d1&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/3860b9b678.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [43.19940092331356,76.87764186382391],
+            zoom: 18
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        myGeoObject = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [43.19940092331356,76.87764186382391]
+            },
+            properties: {
+                iconContent: 'HumanHelp',
+                hintContent: 'Interhational Organization'
+            }
+        }, {
+            preset: 'islands#blackStretchyIcon',
+            draggable: true
+        }),
+
+        myMap.geoObjects
+            .add(myGeoObject);}
+
+
+      
+    
+  </script>
+</head>
+
+  <header>
+    <div>
+      <img src="logo.png" alt="logo" id="logo">
+    </div>
+    <div class="website_name">
+      <p>HumanHelp</p>
+    </div>   
+
+    <nav>
+     <i class="fa fa-search"></i>
+      <input type="text" placeholder="Искать" id="ser">
+      <a href="main.html" id="current">ГЛАВНАЯ</a>
+      <a href="here.html">ПРЕБЫВАНИЕ В РК</a>
+      <a href="about.html">РАБОТА И ПРОЖИВАНИЕ</a>
+      <a href="info.html">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a><div id="i">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-telegram"></i>
+    </div>
+    </nav>
+    <div id="account">
+      <a href="registration_page.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+
+  </header>
+<body >  
+<section id="sita"><p>"Память, я полагаю, есть замена хвоста, навсегда утраченного нами в счастливом процессе эволюции. Она управляет нашими движениями, включая миграцию. Помимо этого, есть нечто явно атавистическое в самом процессе вспоминания — потому хотя бы, что процесс этот не бывает линейным. Кроме того, чем больше помнишь, тем ты ближе к смерти."<br><br><b>Иосиф Александрович Бродский</b>
+</p></section>
+  <section>
+    
+    <br><br><br>
+    <h4 align="center">КАК НАША ПЛАТФОРМА МОЖЕТ ПРЕДСТАВИТЬ ЖИЛЬЕ И СТАБИЛЬНУЮ РАБОТУ?</h4>
+    <br><img src="job.jpg" id="think">  
+    <p id="sklad">Если вы – иностранец и решили осуществлять трудовую деятельность на территории Республики Казахстан, то в этой статье мы вам подскажем все подробно. Каждый гражданин должен быть зарегистрирован по месту жительству . <br>  Это возможно если только есть собственное жилье или же с согласия собственника жилья. Как быть если собственного жилья нет и собственник жилья не дает свое согласие?               
+<br>
+Согласно статьям <mark>23, 24 Закона Республики Казахстан «О жилищных отношениях»</mark>, собственник или лицо, уполномоченное  собственником сдавать жилище внаем, обязаны зарегистрировать проживающих в сдаваемом жилище лиц в порядке, установленном законодательством Республики Казахстан.  </p>
+
+  </section>
+<br><br>
+  <section id="bek" >
+  <img src="bob.jpeg" id="think2" >
+<li>
+  <ul>ЦИАН наиболее популярный сайт для пoиску жилья.<br>  Здeсь можнo найти квартиру, кoмнату, мecто в oбщежитии, загородный дом и участок земли. </ul></li> 
+
+
+ <li> <ul>Авито уже давно перестал быть сайтом, с помощью которого продают подержанные вещи.  В числе прочего здесь можно найти и недвижимость — как для покупки, так и для аренды.</ul></li>
+  <li id="ful"><ul>Как видно из названия, это сервис от Яндекса, который знает, как настраивать поиск.<br>  Пользоваться сервисом удобно и просто. <br> Здесь множество фильтров, которые делают пoиск точнее, а нaйденные oбъявления лучше соответствуют вaшим требованиям. <br>Можнo нaстроить поиск по карте, выделив нужную вaм oбласть.</ul></li>
+
+</section>  
+</body>
+    <br><br>
+  <footer>
+    <div id="footer_info">
+      <h2>Наши контакты</h2>
+      <div>+7 777 987 65 43</div>
+      <div>human.help@mail.ru<br>help.human@gmail.com</div>
+      <p>Алматы, Мустафина 5Г,HumanHelp</p>
+      <p><br>Рабочее время:</br><br>понедельник (9:00-16:00)<br/><br> среда (9:00-16:00)</br><br>пятница (9:00-16:00)</p>
+    </div>
+ <fieldset id="map1"><div id="map"></div></fieldset>
+    </footer>
+
+   
+
+
+  <div id="copyright">Все права защищены <br>&copy; humanhelp</div>
+</html>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&display=swap');
+*{
+	font-family: 'Josefin Sans', sans-serif;
+}
+#content{
+	width: 500px;
+	margin: auto;
+	background-color: #00BFFF;
+	padding: 15px;
+	border-radius: 10px;
+	color: white;
+}
+.enter{
+	text-align: center;
+}
+h1{
+	text-align: center;
+	color: white;
+}
+label{
+	font-size: 20px;
+}
+button{
+	padding: 5px;
+	border: 2px solid #0000FF;
+	margin: 5px;
+	border-radius: 3px;
+	font-style: oblique;
+	font-size: 15px;
+}
+input{
+	border: 2px solid #0000FF;
+	padding: 5px;
+	border-radius: 3px;
+}
+span{
+	padding: 3px;
+	border-radius: 2px;
+}

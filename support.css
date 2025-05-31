@@ -1,0 +1,66 @@
+
+
+
+#common{
+	height:750px;
+	width:270px;
+	background-color:aqua;
+}
+#sec{
+	height:40px;
+	width: 400px;
+}
+
+#first{
+	width:150px;
+	height: 30px;
+	align-content: center;
+	margin-top:10px;
+}
+#second{
+	width:150px;
+	height: 30px;
+		margin-top:10px;
+}
+#myn{
+	width:50px;
+	height: 25px;
+}
+#emyn{
+	width:50px;
+	height: 25px;
+}
+
+#umyn{
+	width:50px;
+	height: 25px;
+}
+
+#tmyn{
+	width:50px;
+	height: 25px;
+}
+#pic{
+	width:400px;
+	height: 50px;
+	background-color: white;
+}
+#visa{
+	width:150px;
+	height:40px;
+}
+#username{
+	width: 350px;
+	height: 50px;
+}
+#pay{
+	height: 60px;
+	width: 300px;
+	background-color:green;
+	border-radius:15px;
+}
+ button:hover {
+    box-shadow: 0 0 10px #ff7622;
+}
+
+

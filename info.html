@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="info.css">
+  <title>ПОЛЕЗНАЯ ИНФОРМАЦИЯ</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=811eea2a-c8b6-4920-a44d-53e55e1323d1&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/3860b9b678.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [43.19940092331356,76.87764186382391],
+            zoom: 18
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+        myGeoObject = new ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: [43.19940092331356,76.87764186382391]
+            },
+            properties: {
+                iconContent: 'HumanHelp',
+                hintContent: 'Interhational Organization'
+            }
+        }, {
+            preset: 'islands#blackStretchyIcon',
+            draggable: true
+        }),
+
+        myMap.geoObjects
+            .add(myGeoObject);
+    }
+
+    function moneyConverter(valNum){
+      document.getElementById("outputrub").innerHTML=valNum/6.57;
+      document.getElementById("outputdol").innerHTML=valNum/461.71;
+       document.getElementById("outputgr").innerHTML=valNum/12.51;
+        document.getElementById("outputlir").innerHTML=valNum/24.51;
+         document.getElementById("outputeuro").innerHTML=valNum/492.51;
+    }
+
+  </script>
+</head>
+
+  <header>
+    <div>
+      <img src="logo.png" alt="logo" id="logo">
+    </div>
+    <div class="website_name">
+      <p>HumanHelp</p>
+    </div>
+    <nav>
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Искать" id="ser">
+      <a href="main.html" id="current">ГЛАВНАЯ</a>
+      <a href="here.html">ПРЕБЫВАНИЕ В РК</a>
+      <a href="about.html">РАБОТА И ПРОЖИВАНИЕ</a>
+      <a href="info.html">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a><div id="i">
+     <a href="https://instagram.com/tip_disa?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+     <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+     <a href=""><i class="fa-brands fa-telegram"></i></a> 
+    </div>
+    </nav>
+    <div id="account">
+      <a href="registration_page.html"><i class="fa-solid fa-user"></i></a>
+    </div>
+  </header>
+  <body>
+    <br><br>
+
+ <h5 align="center" id="user">Дорогие пользователи  других населении!!!<br>Мы создали ради вас бесплатный конвертер валют. </h5>        <br><br>
+     
+<p id="user1">Расширенный конвертер валют на нашем сайте будет очень полезен организациям,группам, людям которые хотят конвертировать свои сбережения на тенге.<br>
+С каждым днем потребность в использовании онлайн конвертера стремительно растет. Это связано с привязкой к курсам валют.Удобный, функциональный и простой в использовании конвертер валют позволяет одним из первых узнавать обменный курс денежных средств других государств <b id="auto">АВТОМАТИЧЕСКИ</b></p><br>
+<br><br><br>
+<div align="center">
+         <fieldset   align="center"class="name">
+    <h2 id="con">ONLINE MONEY CONVERTER</h2>
+    <p>
+    <label>KZ</label>
+    <input type="number" id="inputkz" placeholder="tenge" oninput="moneyConverter(this.value)" onchange="moneyConverter(this.value)">
+  </p>
+
+  <div >РУБЛЬ</div><p id="outputrub"></p><br>
+  <div>АМЕРИКАНСКИЙ ДОЛЛАР</div><p id="outputdol"></p><br>
+  <div>ГРИВНА</div><p id="outputgr"></p><br>
+  <div>ТУРEЦКАЯ ЛИРА</div><p id="outputlir"></p><br>
+  <div>ЕВРО</div><p id="outputeuro"></p><br>
+
+</fieldset> 
+</div>
+  </body>
+
+  <footer>
+    <div id="footer_info">
+      <h2>Наши контакты</h2>
+      <div>+7 777 987 65 43</div>
+      <div>human.help@mail.ru<br>help.human@gmail.com</div>
+      <p>Алматы, Мустафина 5Г,HumanHelp</p>
+      <p><br>Рабочее время:</br><br>понедельник (9:00-16:00)<br/><br> среда (9:00-16:00)</br><br>пятница (9:00-16:00)</p>
+    </div>
+   
+<fieldset id="map1"><div id="map"></div></fieldset>
+
+  </footer>
+  <div id="copyright">Все права защищены <br>&copy; humanhelp</div>
+  </html>
